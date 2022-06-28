@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Joke from "./Joke";
 import "./JokeList.css";
+import Spinner from "react-bootstrap/Spinner";
+
 
 // class JokeList extends React.Component {
 //   constructor(props) {
@@ -88,7 +90,9 @@ function JokeList({ numJokesToGet = 10 }) {
     );
   }
 
-  return <div className="JokeList">Loading...</div>;
+  return <div className="JokeList">Loading Jokes...</div>;
+    // return <Spinner animation="border">Loading Jokes...</Spinner>
+
 
 }
 
