@@ -1,14 +1,18 @@
 import React from "react";
 import "./Joke.css";
 
-//Refactored version
 class Joke extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { vote: 0, isHidden: false };
-    
+    this.state = {
+      vote: 0, isHiding: false
+    };
   }
+
   render() {
+    // console.log(this.state);
+    console.log(this.props);
+    console.log(this.props.text);
     const {vote} = this.state;
     const { text } = this.props;
     return (
@@ -28,13 +32,14 @@ class Joke extends React.Component {
   }
 }
 
+
 // function Joke({ vote, votes, text, id }) {
 //   const upVote = () => vote(id, +1);
 //   const downVote = () => vote(id, -1);
 
 //   return (
 //     <div className="Joke">
-//       <div className="Joke-votearea">
+//       <div className="Joke-vote-area">
 //         <button onClick={upVote}>
 //           <i className="fas fa-thumbs-up" />
 //         </button>

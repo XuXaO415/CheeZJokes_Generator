@@ -3,6 +3,27 @@ import axios from "axios";
 import Joke from "./Joke";
 import "./JokeList.css";
 
+// class JokeList extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       jokes: [],
+//       vote: 0
+//     };
+//   }
+//   render() {
+//     const { jokes } = this.state;
+//     return (
+//       <div className="JokeList">
+//         {jokes.map(joke => (
+//           <Joke key={joke.id} text={joke.text} />
+//         ))}
+//       </div>
+//     );
+//   }
+// }
+
+
 function JokeList({ numJokesToGet = 10 }) {
   const [jokes, setJokes] = useState([]);
 
@@ -35,7 +56,7 @@ function JokeList({ numJokesToGet = 10 }) {
     if (jokes.length === 0) getJokes();
   }, [jokes, numJokesToGet]);
 
-  /* empty joke list and then call getJokes */
+//   /* empty joke list and then call getJokes */
 
   function generateNewJokes() {
     setJokes([]);
@@ -67,7 +88,7 @@ function JokeList({ numJokesToGet = 10 }) {
     );
   }
 
-  return null;
+  return <div className="JokeList">Loading...</div>;
 
 }
 
