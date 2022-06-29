@@ -2,28 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Joke from "./Joke";
 import "./JokeList.css";
-import Spinner from "react-bootstrap/Spinner";
-
-
-// class JokeList extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       jokes: [],
-//       vote: 0
-//     };
-//   }
-//   render() {
-//     const { jokes } = this.state;
-//     return (
-//       <div className="JokeList">
-//         {jokes.map(joke => (
-//           <Joke key={joke.id} text={joke.text} />
-//         ))}
-//       </div>
-//     );
-//   }
-// }
 
 
 function JokeList({ numJokesToGet = 10 }) {
