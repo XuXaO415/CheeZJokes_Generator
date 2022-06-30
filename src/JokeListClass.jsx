@@ -33,6 +33,13 @@ class JokeListClass extends React.Component {
         this.setState({ jokes: [{ ...jokeObj, votes: 0 }] });
     }
 
+    async componentDidUpdate() {
+        this.id();
+        this.votes();
+    
+    }
+    
+
   render() {
     const { jokes } = this.state;
 
